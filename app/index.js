@@ -12,8 +12,8 @@ export default function Login() {
     <KeyboardAvoidingView style={styles.container}
     behavior={Platform.OS === 'ios' ? 'padding':undefined}>
     <View>
-        <Text>Meu Bolso</Text>
-        <Text>Controle seus finanças.</Text>
+        <Text style="title">Meu Bolso</Text>
+        <Text style="subtitle">Controle seus finanças.</Text>
 
         <AppInput label="E-mail" placeholder="Digite seu e-mail"
         autoCapitalize="none" keyboardType="email-address"/>
@@ -23,10 +23,37 @@ export default function Login() {
 
         <AppButton title="Entrar" /> 
 
+        <TouchableOpacity>
+            <Text style={styles.link}>Criar nova conta</Text>
+        </TouchableOpacity>
+
     </View>
     </KeyboardAvoidingView>
 }
 
 const styles = StyleSheet.create({
-
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        padding: 24,
+        backgroundColor:'#f8f9fa'
+    },
+    title: {
+       fontSize: 34,
+       fontWeight: '900',
+       color: '#2f3640',
+       textAlign: 'center'
+    },
+    subtitle: {
+        color:'#7f8c8d',
+        textAlign:'center',
+        marginTop: 8,
+        marginBottom: 32
+    },
+    link: {
+        color:'#008f72',
+        textAlign:'center',
+        marginTop: 20,
+        fontWeight:'700'
+    }
 });
