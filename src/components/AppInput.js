@@ -24,12 +24,14 @@ const styles = StyleSheet.create({
     },
 
     input: {
-        backgroundColor: '#fff',
-        borderWidth: 1,
-        borderColor: COLORS.border,
-        borderRadius: RADIUS.md
+    backgroundColor: '#fff',
+    borderWidth: 1,
+    borderColor: COLORS.border,
+    borderRadius: RADIUS.md,
+    height: 55,
+    paddingHorizontal: 15,
+    fontSize: 16
     },
-
     errorInput: {
       borderColor: COLORS.danger
     },
