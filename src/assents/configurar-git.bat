@@ -5,15 +5,20 @@ echo Git configurado com sucesso!
 pause
 
 Para criar pela primeira vez
-git init
-git add .
-git commit -m "Primeiro commit"
-git branch -M main
-git remote add origin https://github.com/Yashin-yas/app-meu-bolso
-git push -u origin main
+@REM git init
+@REM git add .
+@REM git commit -m "Primeiro commit"
+@REM git branch -M main
+@REM git remote add origin https://github.com/Yashin-yas/app-meu-bolso
+@REM git push -u origin main
 
-Para atualizar o projeto
-git init
-git add .
-git commit -m "Primeiro commit"
-git push -u origin main
+@REM Para atualizar o projeto
+@REM git init
+@REM git add .
+@REM git commit -m "Primeiro commit"
+@REM git push -u origin main
+
+@REM git pull origin --allow-unrelated-histories
+
+@REM atualizar pacotes
+@REM npx expo install --fix
