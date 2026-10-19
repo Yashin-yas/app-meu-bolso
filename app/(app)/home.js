@@ -1,30 +1,38 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+
+import AppButton from '../src/components/AppButton';
 
 export default function Home() {
     return (
         <View style={styles.container}>
             <View style={styles.card}>
-
                 <Text style={styles.title}>
                     Meu Bolso
                 </Text>
 
                 <Text style={styles.subtitle}>
-                    Bem-vindo ao seu controle financeiro!
+                    Resumo financeiro
                 </Text>
 
                 <Text style={styles.text}>
+                    Bem-vindo ao seu controle financeiro!
                     Aqui você poderá acompanhar suas finanças,
                     organizar seus gastos e cuidar melhor do seu dinheiro.
                 </Text>
 
+                <TouchableOpacity style={styles.profileButton}>
+                    <Text style={styles.profileButtonText}>
+                        Perfil
+                    </Text>
+                </TouchableOpacity>
+
+                <AppButton title="Gerar relatório PDF" />
             </View>
         </View>
     );
 }
 
 const styles = StyleSheet.create({
-
     container: {
         flex: 1,
         justifyContent: 'center',
@@ -39,9 +47,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#ffffff',
         padding: 30,
         borderRadius: 24,
-
         elevation: 6,
-
         shadowColor: '#000',
         shadowOffset: {
             width: 0,
@@ -72,9 +78,20 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontSize: 15,
         lineHeight: 23,
+        marginBottom: 24,
     },
 
+    profileButton: {
+        backgroundColor: '#e5f5ef',
+        paddingVertical: 12,
+        borderRadius: 12,
+        alignItems: 'center',
+        marginBottom: 16,
+    },
+
+    profileButtonText: {
+        color: '#008f72',
+        fontSize: 16,
+        fontWeight: '700',
+    },
 });
-
-
-
