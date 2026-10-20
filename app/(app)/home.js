@@ -1,11 +1,12 @@
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
-
-import AppButton from '../src/components/AppButton';
+import { router } from 'expo-router';
+import BalanceCard from '../../src/components/BalanceCard';
+import AppButton from '../../src/components/AppButton';
 
 export default function Home() {
     return (
         <View style={styles.container}>
-            <View style={styles.card}>
+            <View style={styles.header}>
                 <Text style={styles.title}>
                     Meu Bolso
                 </Text>
@@ -25,9 +26,12 @@ export default function Home() {
                         Perfil
                     </Text>
                 </TouchableOpacity>
+            </View>
+
+            <BalanceCard balance={5000}/>
 
                 <AppButton title="Gerar relatório PDF" />
-            </View>
+            
         </View>
     );
 }
@@ -40,7 +44,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#eef7f4',
     },
 
-    card: {
+    header: {
         width: '100%',
         maxWidth: 420,
         alignSelf: 'center',
