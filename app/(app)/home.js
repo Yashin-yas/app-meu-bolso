@@ -7,14 +7,15 @@ export default function Home() {
     return (
         <View style={styles.container}>
             <View style={styles.header}>
+            <View>
                 <Text style={styles.title}>
                     Meu Bolso
                 </Text>
 
-                <Text style={styles.subtitle}>
+                <Text style={styles.sub}>
                     Resumo financeiro
                 </Text>
-
+            </View>
                 <Text style={styles.text}>
                     Bem-vindo ao seu controle financeiro!
                     Aqui você poderá acompanhar suas finanças,
@@ -31,6 +32,10 @@ export default function Home() {
             <BalanceCard balance={5000}/>
 
                 <AppButton title="Gerar relatório PDF" />
+
+                <View style={styles.row}>
+
+                </View>
             
         </View>
     );
@@ -39,42 +44,34 @@ export default function Home() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
+        paddingTop: '60',
         padding: 24,
-        backgroundColor: '#eef7f4',
+        backgroundColor: '#f8f8f8'
+        
     },
 
     header: {
-        width: '100%',
-        maxWidth: 420,
-        alignSelf: 'center',
-        backgroundColor: '#ffffff',
-        padding: 30,
-        borderRadius: 24,
-        elevation: 6,
-        shadowColor: '#000',
-        shadowOffset: {
-            width: 0,
-            height: 4,
-        },
-        shadowOpacity: 0.12,
-        shadowRadius: 10,
+       flexDirection:'row',
+       justifyContent:'space-between',
+       alignItems:'center',
+       paddingVertical:16
     },
 
     title: {
-        fontSize: 36,
+        fontSize: 26,
         fontWeight: '900',
-        color: '#008f72',
+        color: '#2f3640',
         textAlign: 'center',
-        marginBottom: 8,
+        
     },
 
-    subtitle: {
+    sub: {
         color: '#7f8c8d',
-        textAlign: 'center',
-        fontSize: 18,
-        fontWeight: '700',
-        marginBottom: 20,
+    },
+ 
+    row: {
+      flexDirection: 'row',
+      marginHorizontal: -4
     },
 
     text: {
